@@ -1,0 +1,638 @@
+<div class="container mt-2">
+    <!--   <div class="card card-block mb-2">
+        <h4 class="card-title">Card 1</h4>
+        <p class="card-text">Welcom to bootstrap card styles</p>
+        <a href="#" class="btn btn-primary">Submit</a>
+      </div>   -->
+      <div class="row">
+        <div class="col-md-3 col-sm-6 item">
+          <div class="card item-card card-block">
+          <h4 class="card-title text-right"><i class="material-icons">settings</i></h4>
+        <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
+            <h5 class="item-card-title mt-3 mb-3">Sierra Web Development • Owner</h5>
+            <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p> 
+      </div>
+        </div>
+        <div class="col-md-3 col-sm-6 item">
+          <div class="card item-card card-block">
+          <h4 class="item-card-title text-right"><i class="material-icons">settings</i></h4>
+        <img src="https://static.pexels.com/photos/7357/startup-photos.jpg" alt="Photo of sunset">
+            <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
+            <p class="card-text">This is a company that builds websites, web .</p> 
+      </div>
+        </div>
+        <div class="col-md-3 col-sm-6 item">
+          <div class="card item-card card-block">
+          <h4 class="item-card-title text-right"><i class="material-icons">settings</i></h4>
+        <img src="https://static.pexels.com/photos/262550/pexels-photo-262550.jpeg" alt="Photo of sunset">
+            <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
+            <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p> 
+      </div>
+        </div>
+        <div class="col-md-3 col-sm-6 item">
+          <div class="card item-card card-block">
+          <h4 class="item-card-title text-right"><i class="material-icons">settings</i></h4>
+        <img src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg" alt="Photo of sunset">
+            <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
+            <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p> 
+      </div>
+        </div>    
+      </div>
+      
+</div>
+<style>
+    img{
+  height:150px;
+  width:100%;
+}
+
+.item{
+  padding-left:5px;
+  padding-right:5px;
+}
+.item-card{
+  transition:0.5s;
+  cursor:pointer;
+}
+.item-card-title{  
+  font-size:15px;
+  transition:1s;
+  cursor:pointer;
+}
+.item-card-title i{  
+  font-size:15px;
+  transition:1s;
+  cursor:pointer;
+  color:#ffa710
+}
+.card-title i:hover{
+  transform: scale(1.25) rotate(100deg); 
+  color:#18d4ca;
+  
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.card-text{
+  height:80px;  
+}
+
+.card::before, .card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+.card::before {
+  transform-origin: left top;
+}
+.card::after {
+  transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+</style>    
+
+
+
+
+
+
+
+<!-- modal -->
+<div class="container">
+    <h1>Bootstrap modal social login</h1>
+    <hr />
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-social">Show Modal</button>
+  
+    <div class="modal fade" id="modal-social" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal"><i class="icon-xs-o-md"></i></button>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title caps"><strong>Вход на сайт</strong></h4>
+          </div>
+          <div class="modal-body">
+            <p>Войти, используя аккаунт в:</p>
+            <div id="via_social" class="row">
+              <div class="col-xs-12" style="border-bottom: solid 1px rgb(229, 228, 228);padding-bottom: 13px;">
+                <ul class="auth-buttons">
+                  <li>
+                    <button type="button" class="btn btn-sm btn-google"><i class="fa fa-google-plus"></i> Google</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-sm btn-twitter"><i class="fa fa-twitter"></i> Twitter</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-sm btn-facebook"><i class="fa fa-facebook"></i> Facebook</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-sm btn-vk"><i class="fa fa-vk"></i> VK</button>
+                  </li>
+  
+                  <li id="more-btn">
+                    <button type="button" onclick="$('#more-btn').hide();$('#more').show();return false;" class="btn btn-sm btn-default">Еще <i class="fa fa-caret-down"></i></button>
+                  </li>
+  
+                  <span id="more" style="display:none;">
+                                          <li>
+                                              <button type="button" class="btn btn-sm btn-default"><i class="fa fa-yahoo"></i> Yahoo</button>
+                                          </li>
+                                          <li>
+                                              <button type="button" class="btn btn-sm btn-default"><i class="fa fa-windows"></i> Live</button>
+                                          </li>
+                                          <li>
+                                              <button type="button" class="btn btn-sm btn-default"><i class="fa fa-github"></i> GitHub</button>
+                                          </li>
+                                          <li>
+                                              <button type="button" class="btn btn-sm btn-default"><i class="fa fa-yandex"></i> Yandex</button>
+                                          </li>
+                                          <li>
+                                              <button type="button" class="btn btn-sm btn-default"><i class="fa fa-openid"></i> OpenId</button>
+                                          </li>
+                                      </span>
+                </ul>
+              </div>
+            </div>
+  
+            <div id="via_ue" class="row">
+              <div class="col-xs-12">
+                <p>С помощью аккаунта на сайте:</p>
+                <form class="form-inline" method="post" id="signinform" action="account/signin/" novalidate="novalidate">
+                  <input type="hidden" name="signin_action" id="id_signin_action" value="login">
+                  <div class="row">
+                    <div class="form-group col-sm-4" style="position:static;">
+                      <input class="form-control" id="id_email" placeholder="Электронная почта" type="text" name="email" tabindex="1" value="">
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <input class="form-control" id="id_password" placeholder="Пароль" type="password" tabindex="2" autocomplete="off" name="password">
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <button id="id_signin_submit" type="submit" data-loading-text="<i class='fa fa-refresh fa-spin'></i>" class="btn btn-primary">Войти</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <div style="margin-top:10px;">
+                  <a href="#" data-toggle="modal" data-target="#signup_panel" data-dismiss="modal">Регистрация</a>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <div style="margin-top:10px;">
+                  <a href="#" data-toggle="modal" data-target="#pass_reset" data-dismiss="modal">Забыли пароль?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="pass_reset" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title caps"><strong>Забыли пароль?</strong></h4>
+          </div>
+          <div class="modal-body">
+            <p>Введите Ваш адрес электронной почты. Инструкция по сбросу пароля будет отправлена на этот адрес.</p>
+            <form novalidate="novalidate">
+              <div class="form-group">
+                <input class="form-control" id="id_email" name="email" type="text" placeholder="Ваш адрес электронной почты">
+              </div>
+              <button id="reset-btn" class="btn btn-primary" data-loading-text="<i class='fa fa-refresh fa-spin'></i>" type="submit">Сбросить мой пароль</button>
+              <button class="btn btn-default" onclick="signInMain();" type="button">Отмена</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="signup_panel" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title caps"><strong>Зарегистрируйте свой аккаунт</strong></h4>
+            <div class="modal-body">
+              <form class="form" novalidate="novalidate">
+                <div class="form-group">
+                  <input class="form-control" id="id_first_name" placeholder=" Имя, видимое для других пользователей " type="text" name="first_name">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="id_email" placeholder="Электронная почта" type="text" name="email" value="">
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Статус* <i class=" fa fa-question-circle details" data-content="Выберите статус" data-title="Статус" data-original-title="" title=""></i></label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <select class="form-control" name="cf_158" id="id_cf_158" onchange="onParentComboboxChanged(this);">
+                        <option value="">*Не выбран</option>
+                        <option value="1">Пользователь</option>
+                        <option value="2">Установщик</option>
+                        <option value="3">Автосалон</option>
+                        <option value="4">Автоэлектрик</option>
+                      </select>
+                      <span class="input-group-addon"><i rel="tooltip" title="Виден всем." class="fa fa-fw fa-group"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Модель оборудования (сигнализации)* <i class=" fa fa-question-circle details" data-content="например, StarLine B94" data-title="Модель оборудования (сигнализации)" data-original-title="" title=""></i></label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="id_cf_155" name="cf_155" value="">
+                      <span class="input-group-addon"><i rel="tooltip" title="Виден всем." class="fa fa-fw fa-group"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Когда установлено оборудование* <i class=" fa fa-question-circle details" data-content="Например, в июле 2014 года" data-title="Когда установлено оборудование" data-original-title="" title=""></i></label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="id_cf_223" name="cf_223" value="">
+                      <span class="input-group-addon"><i rel="tooltip" title="Виден всем." class="fa fa-fw fa-group"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Где установлено оборудование*</label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <select class="form-control" name="cf_340" id="id_cf_340" onchange="onParentComboboxChanged(this);">
+                        <option value="">*Не выбран</option>
+                        <option value="1">Автосалон</option>
+                        <option value="2">Установочный центр</option>
+                        <option value="3">Федеральный установочный центр StarLine</option>
+                        <option value="4">Установил самостоятельно</option>
+                      </select>
+                      <span class="input-group-addon"><i rel="tooltip" title="Виден всем." class="fa fa-fw fa-group"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Модель автомобиля* <i class=" fa fa-question-circle details" data-content="например, Mazda 6" data-title="Модель автомобиля" data-original-title="" title=""></i></label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="id_cf_156" name="cf_156" value="">
+                      <span class="input-group-addon"><i rel="tooltip" title="Виден всем." class="fa fa-fw fa-group"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Год выпуска автомобиля* <i class=" fa fa-question-circle details" data-content="например, 2014" data-title="Год выпуска автомобиля" data-original-title="" title=""></i></label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="id_cf_157" name="cf_157" value="">
+                      <span class="input-group-addon"><i rel="tooltip" title="Виден всем." class="fa fa-fw fa-group"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Тип двигателя* <i class=" fa fa-question-circle details" data-content="Бензиновый или дизелный" data-title="Тип двигателя" data-original-title="" title=""></i></label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <select class="form-control" name="cf_161" id="id_cf_161" onchange="onParentComboboxChanged(this);">
+                        <option value="">*Не выбран</option>
+                        <option value="1">Бензиновый</option>
+                        <option value="2">Дизельный</option>
+                      </select>
+                      <span class="input-group-addon"><i rel="tooltip" title="Виден всем." class="fa fa-fw fa-group"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Тип КПП*</label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <select class="form-control" name="cf_162" id="id_cf_162" onchange="onParentComboboxChanged(this);">
+                        <option value="">*Не выбран</option>
+                        <option value="1">АКПП</option>
+                        <option value="2">МКПП</option>
+                        <option value="3">Вариатор</option>
+                      </select>
+                      <span class="input-group-addon"><i rel="tooltip" title="Виден всем." class="fa fa-fw fa-group"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Номер телефона для связи* <i class=" fa fa-question-circle details" data-content="номер видит только администратор" data-title="Номер телефона для связи" data-original-title="" title=""></i></label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="id_cf_176" name="cf_176" value="">
+                      <span class="input-group-addon"><i rel="tooltip" title="Видимое только для владельца и сотрудников" class="fa fa-fw fa-lock"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Страна*</label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="id_cf_189" name="cf_189" value="">
+                      <span class="input-group-addon"><i rel="tooltip" title="Виден всем." class="fa fa-fw fa-group"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Город*</label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="id_cf_190" name="cf_190" value="">
+                      <span class="input-group-addon"><i rel="tooltip" title="Виден всем." class="fa fa-fw fa-group"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Логин на www.ru <i class=" fa fa-question-circle details" data-content="видит только администратор" data-title="Логин на starline-online.ru" data-original-title="" title=""></i></label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="id_cf_200" name="cf_200" value="">
+                      <span class="input-group-addon"><i rel="tooltip" title="Видимое только для владельца и сотрудников" class="fa fa-fw fa-lock"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkbox">
+                  <label class="control-label">
+                    <input name="tos" type="checkbox"> <a target="_blank" href="//userecho.com/terms-of-service/">Я прочитал и согласен с условиями предоставления услуг</a>
+                  </label>
+                </div>
+                <button id="id_signup_submit" class="btn btn-primary" type="submit" data-loading-text="<i class='fa fa-refresh fa-spin'></i>">Зарегистрироваться</button>
+                <button class="btn btn-default" onclick="signInMain();" type="button">Отмена</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end .container -->
+<style>
+    /* Buttons for sign in form */
+ .btn-google {
+    color:white;
+    background-color: #dd4b39;
+    border-color: #dd4b39;
+}
+.btn-google:hover, .btn-google:focus, .btn-google:active, .btn-google.active {
+    background-color: #d73925;
+    border-color: #c23321;
+    color:white;
+}
+.btn-twitter {
+    color:white;
+    background-color: #55acee;
+    border-color: #55acee;
+}
+.btn-twitter:hover, .btn-twitter:focus, .btn-twitter:active, .btn-twitter.active {
+    background-color: #3ea1ec;
+    border-color: #2795e9;
+    color:white;
+}
+.btn-facebook {
+    color:white;
+    background-color: #3B5998;
+    border-color: #3B5998;
+}
+.btn-facebook:hover, .btn-facebook:focus, .btn-facebook:active, .btn-facebook.active {
+    background-color: #344e86;
+    border-color: #2d4373;
+    color:white;
+}
+.btn-vk {
+    color:white;
+    background-color: #36638e;
+    border-color: #36638e;
+}
+.btn-vk:hover, .btn-vk:focus, .btn-vk:active, .btn-vk.active {
+    background-color: #2f567c;
+    border-color: #284969;
+    color:white;
+}
+.auth-buttons {
+    padding-left: 0px;
+}
+.auth-buttons li {
+    list-style: none;
+    margin-bottom: 5px;
+    float: left;
+    margin-right: 5px;
+}
+.close-signin {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 3000;
+}
+#via_ue .form-inline .form-group {
+    vertical-align: top;
+}
+</style>
+<!-- Logion -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-2"></div>
+        <div class="col-lg-6 col-md-8 login-box">
+            <div class="col-lg-12 login-key">
+                <i class="fa fa-key" aria-hidden="true"></i>
+            </div>
+            <div class="col-lg-12 login-title">
+                ADMIN PANEL
+            </div>
+
+            <div class="col-lg-12 login-form">
+                <div class="col-lg-12 login-form">
+                    <form>
+                        <div class="form-group">
+                            <label class="form-control-label">USERNAME</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">PASSWORD</label>
+                            <input type="password" class="form-control" i>
+                        </div>
+
+                        <div class="col-lg-12 loginbttm">
+                            <div class="col-lg-6 login-btm login-text">
+                                <!-- Error Message -->
+                            </div>
+                            <div class="col-lg-6 login-btm login-button">
+                                <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-2"></div>
+        </div>
+    </div>
+
+<style>
+    body {
+    background: #222D32;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-box {
+    margin-top: 75px;
+    height: auto;
+    background: #1A2226;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.login-key {
+    height: 100px;
+    font-size: 80px;
+    line-height: 100px;
+    background: -webkit-linear-gradient(#27EF9F, #0DB8DE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-title {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ECF0F5;
+}
+
+.login-form {
+    margin-top: 25px;
+    text-align: left;
+}
+
+input[type=text] {
+    background-color: #1A2226;
+    border: none;
+    border-bottom: 2px solid #0DB8DE;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    color: #ECF0F5;
+}
+
+input[type=password] {
+    background-color: #1A2226;
+    border: none;
+    border-bottom: 2px solid #0DB8DE;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    color: #ECF0F5;
+}
+
+.form-group {
+    margin-bottom: 40px;
+    outline: 0px;
+}
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid #0DB8DE;
+    outline: 0;
+    background-color: #1A2226;
+    color: #ECF0F5;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.form-control-label {
+    font-size: 10px;
+    color: #6C6C6C;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-outline-primary {
+    border-color: #0DB8DE;
+    color: #0DB8DE;
+    border-radius: 0px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn-outline-primary:hover {
+    background-color: #0DB8DE;
+    right: 0px;
+}
+
+.login-btm {
+    float: left;
+}
+
+.login-button {
+    padding-right: 0px;
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.login-text {
+    text-align: left;
+    padding-left: 0px;
+    color: #A2A4A4;
+}
+
+.loginbttm {
+    padding: 0px;
+}
+</style>
+
+<!-- alert -->
+
+<div class="container">
+      <h2>Alerts</h2>
+      <div class='row'>
+        <div class="alert-box" style="float: none; margin: 0 auto;">
+        <div class="alert alert-success">
+          <div class="alert-icon text-center">
+            <i class="fa fa-check-square-o  fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="alert-message text-center">
+            <strong>Success!</strong> Thank you for signup.
+          </div>
+        </div>
+      </div>
+      </div
+</div>
+<style>
+    .alert-box {
+  max-width: 300px;
+  min-height: 300px;
+}
+
+.alert-icon {
+  padding-bottom: 20px;
+}
+
+</style>

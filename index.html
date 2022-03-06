@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Course registration System</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbar-fixed/">
+    <!-- Bootstrap core CSS -->
+    <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+    <!-- dynamic  CSS -->
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header justify-content-center  align-items-center">
+        <small>Contact Support <a href="tel:+233 55 684 4331">+233 55 684 4331 </a>&nbsp; &nbsp;&nbsp;| &nbsp;&nbsp;<a href="tel:+233 23 493 0806">  +233 23 493 0806</a></small>
+        <div>
+            <img src="./img/Pukka Logo-01.png" alt="">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md  navbar-light bg-white shadow-sm px-5">
+    <a class="navbar-brand" href="#">
+        Institution Name
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <form class="form-inline mt-2 mt-md-0 ml-auto float-right">
+        <input class="form-control mr-sm-2" type="hidden" placeholder="Search" aria-label="Search">
+        <a href="login.html" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</a>
+        </form>
+    </div>
+    </nav>
+    <!-- main -->
+    <div role="main" class="container">
+        <div id="upper" class="mt-2 mb-2">
+              <div class="row">
+                <div class="col-md-6 ">
+                    <div class="item col-md-12 outline">
+                        <div class="card item-card card-block">
+                            <p class="text-muted welcome">Welcome,</p>
+                            <h1>111222333</h1>
+                              <p class="card-text">The registration is designed for you to register your semester courses. Access to thisd module depends on wether you have met your financial obligations to the university</p> 
+                        </div>
+                    </div>
+                    <div class="item col-md-12 shadow-default">
+                        <div class="card item-card card-block">
+                            
+                            <i class="fa fa-bell fa-2x"></i> <p class="card-text">
+                                Deadline for liberal selection courses for <script>x = new Date();document.write(x.getFullYear() +"/" + (x.getFullYear()+1))</script> academic has been extended to 18th September 2020
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6  ">
+                    <div class="com-md-12 item shadow-alt outline-alt">
+                        <div class="card item-card card-block">
+                            <h1>Registration Details</h1>
+                              <div class="status">
+                                <p class="card-text"><span class="text-muted">Status: </span><span class="status">Not Registered</span></p> 
+                              </div>
+                        </div>
+                    </div>
+                </div>    
+              </div>
+        </div>
+        <div id="main" class="mt-4">
+            <h1 class="h1-alt">Available Courses</h1>
+              <div class="row">
+                <a href="#" class="item col-md-5 shadow-default" data-toggle="modal" data-target="#modal_social">
+                    <div class="card item-card card-block">
+                          <h5 class="card-title  mt-3 mb-3 text-muted">GPD 231Bd</h5>
+                          <p class="card-text">Public speaking</p> 
+                    </div>
+                </a>
+                <a href="#" class="item col-md-5 shadow-default" data-toggle="modal" data-target="#modal_social">
+                    <div class="card item-card card-block">
+                          <h5 class="card-title  mt-3 mb-3 text-muted">GPD 231Bd</h5>
+                          <p class="card-text">Public speaking</p> 
+                    </div>
+                </a>
+
+              </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="modal_social" tabindex="-1">
+        <div class="modal-dialog">
+        <div class="modal-content px-1">
+            <button type="button" class="close" data-dismiss="modal"><i class="icon-xs-o-md"></i></button>
+            <div class="modal-header">
+                <h6 class="modal-title caps"><strong>Complete Registration Details</strong></h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <h2>111222333</h2>
+                <p class="font-weight-bold">Early Childhood care and Education</p>
+                <p class="text-muted">GPD 231B;</p>
+                <div class="info outline">
+                    <i class="fa fa-info-circle"></i>
+                    <span>Please enter details below and register for this course</span>
+                </div>
+                <form action="" autocomplete="off">
+                    <div class="row my-1">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name = "name" placeholder="Full name">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name = "phone" placeholder="Phone number" minlength="10">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="input-group">
+                            <select name="department" id="department" class="select-css">
+                                <option value="default" selected disabled>Select department</option>
+                                <option value="Accounting Education">Accounting Education</option>
+                                <option value="Management Education">Management Education</option>
+                                <option value="Fashion Education">Fashion Education</option>
+                                <option value="Mathematics Education">Mathematics Education</option>
+                                <option value="IT Education">Hospital and Tourism Education</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class=" btn btn-outline-danger-alt register">Register</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer mt-auto py-3">
+        <div class="header justify-content-center align-items-center">
+        <span class="text-muted text-center">&COPY; <script>document.write(new Date().getFullYear())</script> Pukka Web Services</span>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./lib/js/all.js"></script>
+    <!-- <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script> -->
+    <script src="lib/js/bootstrap.bundle.min.js"></script>
+</html>
