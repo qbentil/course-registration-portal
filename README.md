@@ -12,4 +12,3 @@ Online Course refgistration portal for tertiary institutions.
 3. JavaScript (JQUERY & AJAX)
 4. PHP
 5. MySQL
-6. 
